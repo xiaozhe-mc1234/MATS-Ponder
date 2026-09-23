@@ -1,0 +1,50 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="CUFM 思索扩展"
+authors="xiaozhe_mc1234"
+credits="CUFM"
+description='''CUFM Ponder Additions —— 给 AE2(应用能源2) 和 Supplementaries(锦致装饰) 补充思索(Ponder)教程。
+
+包含场景:
+  · AE2: ME 控制器 / ME 驱动器 / 能量接收器
+  · 锦致装饰: 弹簧发射器 / 绳索与滑轮块
+
+在物品栏里按住思索键(默认 W)对着对应方块就能播放。'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,1.21.2)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="ae2"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="supplementaries"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
