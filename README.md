@@ -1,3 +1,5 @@
+># This mod pack is called Create Ultimate Factory Madness, CUFM!
+
 # MOD-PACK Ponder
 
 A Ponder addon for **Create** on NeoForge 1.21.1. It adds Ponder scenes to blocks from
