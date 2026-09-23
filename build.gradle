@@ -27,7 +27,11 @@ sourceSets.main.resources {
 }
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    // Create's Maven: provides Ponder (net.createmod.ponder), the Ponder API used by this mod.
+    maven {
+        name = 'Createmod'
+        url = 'https://maven.createmod.net/'
+    }
 }
 
 base {
@@ -116,6 +120,9 @@ configurations {
 }
 
 dependencies {
+    // Ponder (the Ponder API lives in net.createmod.ponder, shipped by Create as a jar-in-jar).
+    compileOnly "net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1"
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
