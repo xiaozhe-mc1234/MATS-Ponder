@@ -1,4 +1,4 @@
-> This mod pack is called **Mechanical Aeronautics & Technology: A Four-Season Nature Leisure Journey** (简称 MechAeroTech)—「机械航空科技学：四季自然休闲之旅」。
+> This mod pack is called **Mechanical and Aerospace Technology Studies: A Four-Season Nature Leisure Journey** (简称 M&ATSASNLJ)—「机械航空科技学：四季自然休闲之旅」。
 
 # MOD-PACK Ponder
 
