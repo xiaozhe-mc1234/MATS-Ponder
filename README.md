@@ -5,7 +5,7 @@
 A Ponder addon for **Create** on NeoForge 1.21.1. It adds Ponder scenes to blocks from
 **Applied Energistics 2**, **Supplementaries** and **Amendments**.
 
-Mod ID: `cufmponder` — Version 1.0.0 — License: MIT
+Mod ID: `matsponder` — Version 1.0.0 — License: MIT
 
 ## What it does
 
@@ -41,7 +41,7 @@ scenes whose mod is missing are skipped, so those mods can be added or removed a
 ## Installation
 
 1. Install NeoForge 21.1.248+ for Minecraft 1.21.1.
-2. Put `cufmponder-1.0.0.jar` and Create into the `mods` folder.
+2. Put `matsponder-1.0.0.jar` and Create into the `mods` folder.
 3. Optionally add AE2, Supplementaries and Amendments.
 
 ## Building
@@ -49,13 +49,13 @@ scenes whose mod is missing are skipped, so those mods can be added or removed a
     gradlew.bat build      (Windows)
     ./gradlew build        (Linux, macOS)
 
-The jar is written to `build/libs/cufmponder-1.0.0.jar`.
+The jar is written to `build/libs/matsponder-1.0.0.jar`.
 
 ## Project layout
 
-    src/main/java/com/cufm/ponder/                 PonderMod, CufmPonderPlugin, Ae2Scenes, SuppScenes, AutoScenes
-    src/main/resources/assets/cufmponder/ponder/   387 scene structures (.nbt)
-    src/main/resources/assets/cufmponder/lang/     en_us.json, zh_cn.json
+    src/main/java/com/mats/ponder/                 PonderMod, MatsPonderPlugin, Ae2Scenes, SuppScenes, AutoScenes
+    src/main/resources/assets/matsponder/ponder/   387 scene structures (.nbt)
+    src/main/resources/assets/matsponder/lang/     en_us.json, zh_cn.json
     src/main/templates/META-INF/neoforge.mods.toml mod metadata, placeholders expanded at build time
 
 ## License

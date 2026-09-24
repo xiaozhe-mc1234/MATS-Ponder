@@ -1,4 +1,4 @@
-package com.cufm.ponder;
+package com.mats.ponder;
 
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.createmod.ponder.api.scene.SceneBuilder;
@@ -18,31 +18,31 @@ import net.minecraft.world.phys.Vec3;
 public class Ae2Scenes {
 
     public static void register(PonderSceneRegistrationHelper<ItemLike> helper, ResourceLocation tag) {
-        ItemLike controller = CufmPonderPlugin.item("ae2:controller");
+        ItemLike controller = MatsPonderPlugin.item("ae2:controller");
         if (controller != null) {
             helper.addStoryBoard(controller, "ae2_controller", Ae2Scenes::controller, tag);
         }
-        ItemLike drive = CufmPonderPlugin.item("ae2:drive");
+        ItemLike drive = MatsPonderPlugin.item("ae2:drive");
         if (drive != null) {
             helper.addStoryBoard(drive, "ae2_drive", Ae2Scenes::drive, tag);
         }
-        ItemLike acceptor = CufmPonderPlugin.item("ae2:energy_acceptor");
+        ItemLike acceptor = MatsPonderPlugin.item("ae2:energy_acceptor");
         if (acceptor != null) {
             helper.addStoryBoard(acceptor, "ae2_energy", Ae2Scenes::energy, tag);
         }
-        ItemLike charger = CufmPonderPlugin.item("ae2:charger");
+        ItemLike charger = MatsPonderPlugin.item("ae2:charger");
         if (charger != null) {
             helper.addStoryBoard(charger, "ae2_charger", Ae2Scenes::charger, tag);
         }
-        ItemLike inscriber = CufmPonderPlugin.item("ae2:inscriber");
+        ItemLike inscriber = MatsPonderPlugin.item("ae2:inscriber");
         if (inscriber != null) {
             helper.addStoryBoard(inscriber, "ae2_inscriber", Ae2Scenes::inscriber, tag);
         }
-        ItemLike patternProvider = CufmPonderPlugin.item("ae2:pattern_provider");
+        ItemLike patternProvider = MatsPonderPlugin.item("ae2:pattern_provider");
         if (patternProvider != null) {
             helper.addStoryBoard(patternProvider, "ae2_autocrafting", Ae2Scenes::autocrafting, tag);
         }
-        ItemLike quantumRing = CufmPonderPlugin.item("ae2:quantum_ring");
+        ItemLike quantumRing = MatsPonderPlugin.item("ae2:quantum_ring");
         if (quantumRing != null) {
             helper.addStoryBoard(quantumRing, "ae2_quantum_ring", Ae2Scenes::quantumRing, tag);
         }
@@ -65,7 +65,7 @@ public class Ae2Scenes {
             .placeNearTarget().attachKeyFrame().pointAt(util.vector().centerOf(center));
         scene.idle(80);
 
-        BlockState ctrl = CufmPonderPlugin.state("ae2:controller");
+        BlockState ctrl = MatsPonderPlugin.state("ae2:controller");
         Selection cube = util.select().fromTo(2, 1, 2, 4, 3, 4);
         scene.world().setBlocks(cube, ctrl, false);
         scene.idle(20);
@@ -115,7 +115,7 @@ public class Ae2Scenes {
             .placeNearTarget().attachKeyFrame().pointAt(util.vector().topOf(drivePos));
         scene.idle(80);
 
-        scene.world().setBlock(new BlockPos(4, 1, 3), CufmPonderPlugin.state("ae2:energy_cell"), false);
+        scene.world().setBlock(new BlockPos(4, 1, 3), MatsPonderPlugin.state("ae2:energy_cell"), false);
         scene.idle(10);
         scene.overlay().showText(80)
             .text("The front face holds the cells. Cables connect to any other side of the drive.")

@@ -1,4 +1,4 @@
-package com.cufm.ponder;
+package com.mats.ponder;
 
 import net.createmod.ponder.api.registration.PonderPlugin;
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
@@ -12,18 +12,18 @@ import net.minecraft.world.level.ItemLike;
 /**
  * 思索插件本体: 把 AE2 / 锦致装饰 / Amendments 的方块挂上场景。
  * 另外注册三个分类 tag, 思索界面侧边就会出现「应用能源2 / 锦致装饰 / Amendments」按钮,
- * 点进去是该模组全部可思索方块。对应的语言键: cufmponder.ponder.tag.<id>(和 .description)。
+ * 点进去是该模组全部可思索方块。对应的语言键: matsponder.ponder.tag.<id>(和 .description)。
  */
-public class CufmPonderPlugin implements PonderPlugin {
+public class MatsPonderPlugin implements PonderPlugin {
 
-    // 分类 id(注册时自动加 cufmponder 命名空间)
+    // 分类 id(注册时自动加 matsponder 命名空间)
     private static final String TAG_AE2 = "ae2";
     private static final String TAG_SUPP = "supplementaries";
     private static final String TAG_AMEND = "amendments";
 
     @Override
     public String getModId() {
-        return "cufmponder";
+        return "matsponder";
     }
 
     @Override

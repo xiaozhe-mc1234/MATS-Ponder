@@ -5,10 +5,10 @@ license="${mod_license}"
 [[mods]]
 modId="${mod_id}"
 version="${mod_version}"
-displayName="CUFM 思索扩展"
+displayName="MATS 思索扩展"
 authors="xiaozhe_mc1234"
-credits="CUFM"
-description='''CUFM Ponder Additions —— 给 AE2(应用能源2) 和 Supplementaries(锦致装饰) 补充思索(Ponder)教程。
+credits="MATS"
+description='''MATS Ponder Additions —— 给 AE2(应用能源2) 和 Supplementaries(锦致装饰) 补充思索(Ponder)教程。
 
 包含场景:
   · AE2: ME 控制器 / ME 驱动器 / 能量接收器

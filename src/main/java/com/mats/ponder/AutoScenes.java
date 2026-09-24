@@ -1,4 +1,4 @@
-package com.cufm.ponder;
+package com.mats.ponder;
 
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.createmod.ponder.api.scene.SceneBuilder;
@@ -396,7 +396,7 @@ public class AutoScenes {
                                           ResourceLocation tagAe2, ResourceLocation tagSupp, ResourceLocation tagAmend) {
         java.util.Set<ItemLike> claimed = new java.util.HashSet<>();
         for (String[] b : BLOCKS) {
-            ItemLike item = CufmPonderPlugin.item(b[0] + ":" + b[1]);
+            ItemLike item = MatsPonderPlugin.item(b[0] + ":" + b[1]);
             if (item == null) continue;
             if (!claimed.add(item)) continue;   // 同一物品只保留一个思索, 避免出现切换箭头
             final String sceneId = "auto_" + b[0] + "_" + b[1].replaceAll("[^a-zA-Z0-9_]", "_");
@@ -416,10 +416,10 @@ public class AutoScenes {
         BlockPos pos = util.grid().at(2, 1, 2);
         scene.world().showSection(util.select().position(pos), Direction.DOWN);
         scene.idle(15);
-        scene.overlay().showText(90).text("cufmponder.ponder." + sceneId + ".text_1")
+        scene.overlay().showText(90).text("matsponder.ponder." + sceneId + ".text_1")
             .placeNearTarget().attachKeyFrame().pointAt(util.vector().centerOf(pos));
         scene.idle(100);
-        scene.overlay().showText(110).text("cufmponder.ponder." + sceneId + ".text_2")
+        scene.overlay().showText(110).text("matsponder.ponder." + sceneId + ".text_2")
             .placeNearTarget().attachKeyFrame().pointAt(util.vector().topOf(pos));
         scene.idle(120);
     }

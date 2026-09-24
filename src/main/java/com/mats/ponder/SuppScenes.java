@@ -1,4 +1,4 @@
-package com.cufm.ponder;
+package com.mats.ponder;
 
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.createmod.ponder.api.scene.SceneBuilder;
@@ -12,11 +12,11 @@ import net.minecraft.world.level.ItemLike;
 public class SuppScenes {
 
     public static void register(PonderSceneRegistrationHelper<ItemLike> helper, ResourceLocation tag) {
-        ItemLike launcher = CufmPonderPlugin.item("supplementaries:spring_launcher");
+        ItemLike launcher = MatsPonderPlugin.item("supplementaries:spring_launcher");
         if (launcher != null) {
             helper.addStoryBoard(launcher, "supp_spring_launcher", SuppScenes::springLauncher, tag);
         }
-        ItemLike pulley = CufmPonderPlugin.item("supplementaries:pulley_block");
+        ItemLike pulley = MatsPonderPlugin.item("supplementaries:pulley_block");
         if (pulley != null) {
             helper.addStoryBoard(pulley, "supp_rope_pulley", SuppScenes::ropePulley, tag);
         }
