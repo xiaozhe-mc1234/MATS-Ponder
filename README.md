@@ -1,6 +1,6 @@
 > This mod pack is called **Mechanical and Aerospace Technology Studies: A Four-Season Nature Leisure Journey** (简称 M&ATSASNLJ)—「机械航空科技学：四季自然休闲之旅」~
 
-# MOD-PACK Ponder
+# MATS Ponder
 
 A Ponder addon for **Create** on NeoForge 1.21.1. It adds Ponder scenes to blocks from
 **Applied Energistics 2**, **Supplementaries** and **Amendments**.
