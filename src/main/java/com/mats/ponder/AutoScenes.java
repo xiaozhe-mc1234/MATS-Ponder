@@ -1,5 +1,4 @@
 package com.mats.ponder;
-
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.createmod.ponder.api.scene.SceneBuilder;
 import net.createmod.ponder.api.scene.SceneBuildingUtil;
@@ -7,10 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.resources.ResourceLocation;
-
-/** 自动生成的场景(每个方块一个) —— 由 tools/GenAutoScenes.java 生成, 请勿手改 */
 public class AutoScenes {
-
     private static final String[][] BLOCKS = {
         {"ae2", "paint", "Paint"},
         {"ae2", "crafting_accelerator", "Crafting Co-Processing Unit"},
@@ -391,14 +387,13 @@ public class AutoScenes {
         {"amendments", "wall_lantern", "Wall Lantern"},
         {"amendments", "wall_soul_lantern", "Wall Soul Lantern"},
     };
-
     public static void register(PonderSceneRegistrationHelper<ItemLike> helper,
                                           ResourceLocation tagAe2, ResourceLocation tagSupp, ResourceLocation tagAmend) {
         java.util.Set<ItemLike> claimed = new java.util.HashSet<>();
         for (String[] b : BLOCKS) {
             ItemLike item = MatsPonderPlugin.item(b[0] + ":" + b[1]);
             if (item == null) continue;
-            if (!claimed.add(item)) continue;   // 同一物品只保留一个思索, 避免出现切换箭头
+            if (!claimed.add(item)) continue;
             final String sceneId = "auto_" + b[0] + "_" + b[1].replaceAll("[^a-zA-Z0-9_]", "_");
             final String enName = b[2];
             final boolean ae2 = "ae2".equals(b[0]);
@@ -406,7 +401,6 @@ public class AutoScenes {
             helper.addStoryBoard(item, sceneId, (scene, util) -> generic(scene, util, sceneId, enName, ae2), tag);
         }
     }
-
     private static void generic(SceneBuilder scene, SceneBuildingUtil util, String sceneId, String enName, boolean ae2) {
         scene.title(sceneId, enName);
         scene.setNextUpEnabled(false);
